@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/plasticos.webp" type="image/x-icon">
+    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+    <title>Iniciar sesión | Sistema de inventarios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 p-4 px-5">
+                <img class="img-fluid mx-auto d-block img-plasticos" src="img/plasticos.webp"
+                    alt="Plásticos Royal Abella Ltda.">
+                <h2 class="text-center p-3">Sistema de inventarios</h2>
+                <h4 class="text-left p-2">Iniciar sesión</h4>
+                <p class="p-2" style="font-style: italic; font-size: 12px;">Datos obligatorios <span style="color: red;">*</span></p>
+                <form>
+                    <label for="rol" class="form-label">Seleccionar rol: <span style="color: red;">*</span></label>
+                    <select class="form-select p-2" aria-label="Seleccionar rol:">
+                        <option selected>Seleccionar rol</option>
+                        <option value="1">Administración</option>
+                        <option value="2">Inventarios</option>
+                        <option value="3">Ventas</option>
+                        <option value="4">Despacho</option>
+                    </select>
+                    <div class="mb-3 pt-3">
+                        <label for="usuario" class="form-label">Usuario: <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Digite su usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasena" class="form-label">Contraseña: <span style="color: red;">*</span></label>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Digite su contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="recuerdame">
+                        <label class="form-check-label" for="recuerdame">Recuérdame</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button onclick="location.href='sistema_inventarios/home.html'" type="button" class="btn btn-primary text-uppercase">Ingresar</button>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#modal-olvido">
+                            <p class="text-end">¿Olvidó su contraseña?</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="d-grid gap-2">
+                            <p>Crear usuario:</p>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#registrar-usuario" class="btn btn-primary text-uppercase">Registrarse</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: ¿Olvidó su contraseña? -->
+    <div class="modal fade" id="modal-olvido" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">¿Olvidó su contraseña?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Por favor, escriba su correo electrónico para solicitar restablecer su cuenta:</p>
+                    <div class="mb-3">
+                        <label for="confirmarcorreo" class="form-label"><span style="font-weight: 500;">Correo electónico:</span></label>
+                        <input type="email" class="form-control" placeholder="Digite su correo electrónico">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Registrar nuevo usuario -->
+    <div class="modal fade" id="registrar-usuario" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-xl modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registrar nuevo usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="col-md-6 offset-md-3 p-4 px-5">
+                            <img class="img-fluid mx-auto d-block img-plasticos" src="img/plasticos.webp"
+                                alt="Plásticos Royal Abella Ltda.">
+                            <h2 class="text-center p-3">Registrar nuevo usuario</h2>
+                        </div>
+                    
+                        <div class="col px-5">
+                            <p class="p-2" style="font-style: italic; font-size: 12px;">Datos obligatorios <span
+                                    style="color: red;">*</span></p>
+                        </div>
+                    
+                        <!-- BOTÓN SUBIR FOTO -->
+                        <div class="row">
+                            <div class="col-md-3 cuadro-foto">
+                                <input type="submit" class="btn btn-primary" name="subir-foto" id="up-photo" value="Subir foto"
+                                    title="Clic aquí para subir su foto">
+                            </div>
+                    
+                            <!-- NOMBRE COMPLETO Y CARGO -->
+                            <div class="col-md-6 offset-md-2 p-4">
+                                <label for="nombre-completo" class="form-label pt-2" style="font-weight: 500;">Nombre completo: <span
+                                        style="color: red;">*</span></label>
+                                <input type="text" class="form-control" name="nombre-completo" id="nombre-completo"
+                                    placeholder="Digite su nombre completo" aria-label="Nombre completo">
+                                <label for="cargo" class="form-label pt-3" style="font-weight: 500;">Cargo: <span
+                                        style="color: red;">*</span></label>
+                                <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Digite su cargo"
+                                    aria-label="Cargo">
+                            </div>
+                    
+                            <!-- SELECCIONAR ROL -->
+                            <div class="row">
+                                <div class="col-md-4 offset-md-1 pt-2">
+                                    <label for="sel-rol" class="form-label pt-3" style="font-weight: 500;">Selecccionar rol: <span
+                                            style="color: red;">*</span></label>
+                                    <p class="info-dato">Con base en el cargo, seleccionar el rol</p>
+                                </div>
+                                <!-- ROL: ADMINISTRACIÓN -->
+                                <div class="col pt-4 form-check form-check-inline">
+                                    <label class="form-check-label radio-rol" for="administracion">Administración</label>
+                                    <input class="form-check-input" type="radio" name="administracion" id="administracion"
+                                        value="administracion">
+                                </div>
+                                <!-- ROL: INVENTARIO -->
+                                <div class="col pt-4 form-check form-check-inline">
+                                    <label class="form-check-label radio-rol" for="inventario">Inventario</label>
+                                    <input class="form-check-input" type="radio" name="inventario" id="inventario" value="inventario">
+                                </div>
+                                <!-- ROL:VENTAS -->
+                                <div class="col pt-4 form-check form-check-inline">
+                                    <label class="form-check-label radio-rol" for="ventas">Ventas</label>
+                                    <input class="form-check-input" type="radio" name="ventas" id="ventas" value="ventas">
+                                </div>
+                                <!-- ROL: DESPACHO -->
+                                <div class="col pt-4 form-check form-check-inline">
+                                    <label class="form-check-label radio-rol" for="despacho">Despacho</label>
+                                    <input class="form-check-input" type="radio" name="despacho" id="despacho" value="despacho">
+                                </div>
+                            </div>
+                    
+                            <!-- CIUDAD Y DIRECCIÓN -->
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="ciudad" style="font-weight: 500;">Ciudad: <span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="ciudad" id="ciudad"
+                                        placeholder="Digite su ciudad de residencia">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="direccion" style="font-weight: 500;">Dirección: <span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="direccion" id="direccion"
+                                        placeholder="Digite su dirección de residencia">
+                                </div>
+                            </div>
+                    
+                            <!-- TELÉFONO -->
+                            <div class="col-12 pt-4">
+                                <label for="telefono" class="form-label" style="font-weight: 500;">Teléfono: <span
+                                        style="color: red;">*</span></label>
+                                <p class="info-dato">Teléfono fijo o celular</p>
+                                <input type="text" class="form-control" id="telefono" placeholder="Digite su número de contacto">
+                                <p class="info-dato">Ejemplo: Indicativo +57, Fijo (601)999 9999 - Celular 3104567890</p>
+                            </div>
+                    
+                            <!-- CORREO ELECTRÓNICO -->
+                            <div class="col-12 pt-2 pb-5">
+                                <label for="correo" class="form-label" style="font-weight: 500;">Correo electrónico: <span
+                                        style="color: red;">*</span></label>
+                                <input type="text" class="form-control" id="correo" placeholder="Digite su correo electrónico">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <footer class="footer text-center p-1">
+                        Derechos reservados 2023 ©
+                    </footer>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Crear registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center p-1">
+        Derechos reservados 2023 ©
+    </footer>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

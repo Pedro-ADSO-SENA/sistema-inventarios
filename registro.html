@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/plasticos.webp" type="image/x-icon">
+    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+    <title>Registrar nuevo usuario | Sistema de inventarios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="col-md-6 offset-md-3 p-4 px-5">
+            <img class="img-fluid mx-auto d-block img-plasticos" src="img/plasticos.webp"
+                alt="Plásticos Royal Abella Ltda.">
+            <h2 class="text-center p-3">Registrar nuevo usuario</h2>
+        </div>
+
+        <div class="col px-5">
+            <p class="p-2" style="font-style: italic; font-size: 12px;">Datos obligatorios <span style="color: red;">*</span></p>
+        </div>
+        
+        <!-- BOTÓN SUBIR FOTO -->
+        <div class="row">
+            <div class="col-md-3 cuadro-foto">
+                <input type="submit" class="btn btn-primary" name="subir-foto" id="up-photo" value="Subir foto"
+                    title="Clic aquí para subir su foto">
+            </div>
+
+            <!-- NOMBRE COMPLETO Y CARGO -->
+            <div class="col-md-6 offset-md-2 p-4">
+                <label for="nombre-completo" class="form-label pt-2" style="font-weight: 500;">Nombre completo: <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="nombre-completo" id="nombre-completo" placeholder="Digite su nombre completo"
+                    aria-label="Nombre completo">
+                <label for="cargo" class="form-label pt-3" style="font-weight: 500;">Cargo: <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Digite su cargo" aria-label="Cargo">
+            </div>
+
+            <!-- SELECCIONAR ROL -->
+            <div class="row">
+                <div class="col-md-4 offset-md-1 pt-2">
+                    <label for="sel-rol" class="form-label pt-3" style="font-weight: 500;">Selecccionar rol: <span
+                            style="color: red;">*</span></label>
+                    <p class="info-dato">Con base en el cargo, seleccionar el rol</p>
+                </div>
+                <!-- ROL: ADMINISTRACIÓN -->
+                <div class="col pt-4 form-check form-check-inline">
+                    <label class="form-check-label radio-rol" for="administracion">Administración</label>
+                    <input class="form-check-input" type="radio" name="administracion" id="administracion" value="administracion">
+                </div>
+                <!-- ROL: INVENTARIO -->
+                <div class="col pt-4 form-check form-check-inline">
+                    <label class="form-check-label radio-rol" for="inventario">Inventario</label>
+                    <input class="form-check-input" type="radio" name="inventario" id="inventario" value="inventario">
+                </div>
+                <!-- ROL:VENTAS -->
+                <div class="col pt-4 form-check form-check-inline">
+                    <label class="form-check-label radio-rol" for="ventas">Ventas</label>
+                    <input class="form-check-input" type="radio" name="ventas" id="ventas" value="ventas">
+                </div>
+                <!-- ROL: DESPACHO -->
+                <div class="col pt-4 form-check form-check-inline">
+                    <label class="form-check-label radio-rol" for="despacho">Despacho</label>
+                    <input class="form-check-input" type="radio" name="despacho" id="despacho" value="despacho">
+                </div>
+            </div>
+
+            <!-- CIUDAD Y DIRECCIÓN -->
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="ciudad" style="font-weight: 500;">Ciudad: <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Digite su ciudad de residencia">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="direccion" style="font-weight: 500;">Dirección: <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Digite su dirección de residencia">
+                </div>
+            </div>
+
+            <!-- TELÉFONO -->
+            <div class="col-12 pt-4">
+                <label for="telefono" class="form-label" style="font-weight: 500;">Teléfono: <span style="color: red;">*</span></label>
+                <p class="info-dato">Teléfono fijo o celular</p>
+                <input type="text" class="form-control" id="telefono" placeholder="Digite su número de contacto">
+                <p class="info-dato">Ejemplo: Indicativo +57, Fijo (601)999 9999 - Celular 3104567890</p>
+            </div>
+
+            <!-- CORREO ELECTRÓNICO -->
+            <div class="col-12 pt-2 pb-5">
+                <label for="correo" class="form-label" style="font-weight: 500;">Correo electrónico: <span
+                        style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="correo" placeholder="Digite su correo electrónico">
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer text-center p-1">
+        Derechos reservados 2023 ©
+    </footer>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
