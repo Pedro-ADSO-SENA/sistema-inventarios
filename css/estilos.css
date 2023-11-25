@@ -236,7 +236,7 @@ button.btn-categorias {
 
 div.info-prod-seleccionado {
     line-height: 1em;
-    margin-top: -8em !important;
+    margin-top: -4em !important;
     margin-left: 38% !important;
 }
 
@@ -278,6 +278,75 @@ div.info-prod-seleccionado {
         width: 100%;
     }
 
+    .img-home {
+        max-width: 47% !important;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .img-plasticos {
+        max-width: 35% !important;
+    }
+
+    .logo-usuario {
+        font-size: 1.2rem;
+    }
+
+    .logout {
+        font-size: 0.9rem;
+    }
+
+    .ayuda {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .img-bienvenida {
+        max-width: 40% !important;
+    }
+
+    .txt-bienvenida {
+        font-size: 12px;
+    }
+
+    .titulo-bienvenida {
+        font-size: 1.9rem;
+    }
+
+    .btn-roles>span,
+    .btn-clientes>span,
+    .btn-inventarios>span,
+    .btn-ventas>span,
+    .btn-despacho>span,
+    .btn-soporte>span,
+    .btn-gestiproducto>span {
+        font-size: 1rem;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .btn-gestiproducto {
+        width: 100% !important;
+    }
+    
+    .btn-gestiproducto>span {
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+
+    .img-home {
+        max-width: 40% !important;
+    }
+
+    a.ayuda {
+        position: absolute;
+        float: right;
+        right: auto;
+        padding-top: 0.2em;
+    }
+
     .btn-gestiproducto,
     .btn-vender {
         width: 100% !important;
@@ -289,17 +358,6 @@ div.info-prod-seleccionado {
     .btn-vender>span {
         font-size: 1.2rem;
         font-weight: 500;
-    }
-
-    .img-home {
-        max-width: 47% !important;
-    }
-
-    a.ayuda {
-        position: absolute;
-        float: right;
-        right: auto;
-        padding-top: 0.2em;
     }
 
     div.menu-productos {
@@ -366,73 +424,19 @@ div.info-prod-seleccionado {
 
     img.img-producto {
         margin-left: 5em !important;
-        max-width: 65%;
+        max-width: 90%;
     }
 
     div.inventario-productos>footer.footer {
-        margin-top: 10em !important;
+        margin-top: 0.6em !important;
         margin-left: 3em !important;
     }
-}
 
-@media (min-width: 769px) and (max-width: 992px) {
-    .img-plasticos {
-        max-width: 35% !important;
-    }
-
-    .logo-usuario {
-        font-size: 1.2rem;
+    div.info-prod-seleccionado {
+        margin-top: 1em !important;
+        margin-bottom: 2em !important;
     }
 
-    .logout {
-        font-size: 0.9rem;
-    }
-
-    .ayuda {
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-
-    .img-bienvenida {
-        max-width: 40% !important;
-    }
-
-    .txt-bienvenida {
-        font-size: 12px;
-    }
-
-    .titulo-bienvenida {
-        font-size: 1.9rem;
-    }
-
-    .btn-roles>span,
-    .btn-clientes>span,
-    .btn-inventarios>span,
-    .btn-ventas>span,
-    .btn-despacho>span,
-    .btn-soporte>span,
-    .btn-gestiproducto>span {
-        font-size: 1rem;
-        font-weight: 500;
-        width: 100%;
-    }
-
-    .btn-gestiproducto {
-        width: 100% !important;
-    }
-    
-    .btn-gestiproducto>span {
-        font-size: 1.05rem;
-        font-weight: 500;
-    }
-
-    .img-home {
-        max-width: 40% !important;
-    }
-
-    img.img-producto {
-        max-width: 100%;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -488,12 +492,125 @@ div.info-prod-seleccionado {
         max-width: 97% !important;
     }
 
-    img.img-producto {
+    /* img.img-producto {
         max-width: 100%;
-    }
+    } */
 
     img.img-rol {
         margin: 0 auto;
     }
+
+    a.ayuda {
+        position: absolute;
+        float: right;
+        right: auto;
+        padding-top: 0.2em;
+    }
+
+    .btn-gestiproducto,
+    .btn-vender {
+        width: 100% !important;
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+    
+    .btn-gestiproducto>span,
+    .btn-vender>span {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    div.menu-productos {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1em;
+        width: 100%;
+        height: 25%;
+    }
+
+    div.menu-productos>h4 {
+        text-align: center;
+    }
+
+    button.btn-categorias {
+        display: block;
+    }
+
+    div.menu-productos>form.busqueda-prods {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    div.menu-productos ul.cat-productos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    ul.cat-productos {
+        margin-left: 2em !important;
+    }
+
+    ul.cat-productos li.cat-hogar,
+    ul.cat-productos li.cat-jugueteria,
+    ul.cat-productos li.cat-didacticos,
+    ul.cat-productos li.cat-pinateria {
+        width: 35% !important;
+    }
+
+    ul.cat-productos li.cat-hogar a.cat-hogar,
+    ul.cat-productos li.cat-jugueteria a.cat-jugueteria, 
+    ul.cat-productos li.cat-didacticos a.cat-didacticos, 
+    ul.cat-productos li.cat-pinateria a.cat-pinateria  {
+        position: relative !important;
+    }
+
+    li.item-hogar {
+        width: 80% !important;
+    }
+
+    div.inventario-productos {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    div.inventario-productos>h1 {
+        margin-left: 1.5em !important;
+    }
+
+    img.img-producto {
+        margin-left: 3em !important;
+        max-width: 90%;
+    }
+
+    div.cantidad-disponible {
+        margin-left: 2.5em !important;
+    }
+
+    div.info-prod-seleccionado {
+        margin-top: 1em !important;
+        margin-bottom: 2em !important;
+    }
+
+    div.inventario-productos>footer.footer {
+        margin-top: 0.6em !important;
+        margin-left: 3em !important;
+    }
 }
 
+@media (max-width: 480px) {
+    div.inventario-productos {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    img.img-producto {
+        margin-left: 1em !important;
+        max-width: 100% !important;
+    }
+}

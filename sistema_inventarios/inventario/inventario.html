@@ -38,19 +38,19 @@
                             <a class="nav-link active" aria-current="page" href="../home.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Roles</a>
+                            <a class="nav-link" href="../roles.html">Roles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Clientes</a>
+                            <a class="nav-link" href="../clientes.html">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inventario</a>
+                            <a class="nav-link" href="../inventario/inventario.html">Inventario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ventas</a>
+                            <a class="nav-link" href="../ventas/listadoVentas.html">Ventas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Despacho</a>
+                            <a class="nav-link" href="../despacho/despacho.html">Despacho</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Soporte técnico</a>
@@ -60,7 +60,7 @@
                             <a class="nav-link" href="#">Ayuda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Cerrar sesión</a>
+                            <a class="nav-link" href="../../index.html">Cerrar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -237,11 +237,11 @@
                         <input type="text" class="form-control" id="valor-cantidad">
 
                         <!-- BOTONES GESTIONAR Y VENDER PRODUCTOS -->
-                        <button id="gestiproducto" onclick="actGestiProd()" type="button"
+                        <button data-bs-target="#gestionarProd" data-bs-toggle="modal" id="gestiproducto" onclick="actGestiProd()" type="button"
                             class="btn btn-secondary btn-lg mt-4 btn-gestiproducto">
                             <span>Gestionar producto</span>
                         </button>
-                        <button id="vender" onclick="actVender()" type="button"
+                        <button data-bs-target="#venderProd" data-bs-toggle="modal" id="vender" onclick="actVender()" type="button"
                             class="btn btn-secondary btn-lg mt-4 btn-vender">
                             <span>Vender</span>
                         </button>
@@ -264,6 +264,140 @@
             </footer>
         </div>
     </div>
+
+    <!-- MODAL: GESTIONAR PRODUCTO -->
+    <div class="modal fade" id="gestionarProd" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="staticBackdropLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="gestionarProd">Gestionar producto</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mx-auto d-block img-plasticos" src="../../img/plasticos.webp" alt="Plásticos Royal Abella Ltda">
+                    <h2 class="text-center p-3">Gestionar producto</h2>
+                    <img class="img-fluid mx-auto d-block w-3" src="../../img/hogar/sanduchera.jpg" alt="Sanduchera">
+                    <label class="pt-4" for="#"><strong>Referencia del producto:</strong></label>
+                    <input class="form-control py-2" type="text" value="35450" aria-label="Disabled input example" disabled
+                        readonly>
+                    <label class="pt-4" for="#"><strong>Categoría del producto:</strong></label>
+                    <input class="form-control py-2" type="text" value="HOGAR" aria-label="Disabled input example"
+                        disabled readonly>
+                    <label class="pt-4" for="#"><strong>Descripción del producto:</strong></label>
+                    <input class="form-control py-2" type="text" value="Sanduchera" aria-label="Disabled input example"
+                        disabled readonly>
+                    <label class="pt-4" for="#"><strong>Unidad de empaque</strong></label>
+                    <input class="form-control py-2" type="text" value="144" aria-label="Disabled input example"
+                        disabled readonly>
+                    <label class="pt-4" for="#"><strong>Digite la cantidad a subir:</strong></label>
+                    <input class="form-control py-2" type="text" aria-label="Digite la cantidad a subir">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Subir al inventario</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: PROCESO DE VENTA -->
+    <div class="modal fade" id="venderProd" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+        aria-labelledby="staticBackdropLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="venderProd">Proceso de venta</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mx-auto d-block img-plasticos" src="../../img/plasticos.webp" alt="Plásticos Royal Abella Ltda">
+                    <h2 class="text-center p-3">Venta de productos</h2>
+
+                    <!-- TABLA DE PROCESO DE VENTA-->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered ">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">ID</th>
+                                    <th scope="col" class="text-center">Producto</th>
+                                    <th scope="col" class="text-center">Referencia del producto</th>
+                                    <th scope="col" class="text-center">Categoría del producto</th>
+                                    <th scope="col" class="text-center">Unidad de empaque</th>
+                                    <th scope="col" class="text-center">Cantidad disponible</th>
+                                    <th scope="col" class="text-center">Digite la cantidad</th>
+                                    <th scope="col" class="text-center">Precio por unidad</th>
+                                    <th scope="col" class="text-center">TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">06</th>
+                                    <td class="text-center">Sanduchera</td>
+                                    <td>35450</td>
+                                    <td>HOGAR</td>
+                                    <td>144</td>
+                                    <td>700</td>
+                                    <td>
+                                        <input class="form-control" type="text" value="200" aria-label="Disabled input example" disabled readonly>
+                                    </td>
+                                    <td>$24.000 COP</td>
+                                    <td>
+                                        <strong>$4'800.000 COP</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- BOTONES PARA LA VENTA -->
+                    <div class="row">
+                        <div class="d-grid gap-2 col-md-4 mx-auto">
+                            <button type="button" class="btn btn-outline-success">Agregar producto</button>
+                            <button type="button" class="btn btn-outline-danger">Eliminar producto</button>
+                        </div>
+                        <div class="d-grid gap-2 col-md-4 mx-auto">
+                            <span class="text-center">
+                                <strong>Precio total:</strong>
+                            </span>
+                            <span class="text-center">
+                                <strong style="color: red;">$4'800.000 COP</strong>
+                            </span>
+                        </div>
+                        <div class="d-grid gap-2 col-md-4 mx-auto">
+                            <button type="button" class="btn btn-success" data-bs-target="#confirmarVenta" data-bs-toggle="modal">Confrmar venta</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar venta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: CONFIRMACIÓN DE LA VENTA -->
+    <div class="modal fade" id="confirmarVenta" aria-hidden="true" aria-labelledby="confirmarVenta"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="img-fluid mx-auto d-block img-plasticos" src="../../img/plasticos.webp" alt="Plásticos Royal Abella Ltda" id="confirmarVenta">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="text-center fw-bold">¡Atención!</h1>
+                    <p style="text-align: justify;">
+                        El proceso de la venta para el cliente <strong>DISTRIBUIDORA PLAST SAS</strong>, tendrá un tiempo estimado de aprobación de 48 horas
+                        hábiles. Dentro del tiempo plazo del proceso de venta, podrá actualizar los detalles de la venta en estado: <strong style="color: orange;">En proceso</strong>;
+                        y en caso de aceptar se efectuará entre el día <strong>27/11/2023</strong> hasta el día <strong>29/11/2023</strong>. ¿Desea continuar?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-target="#venderProd" data-bs-toggle="modal">No, cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sí, confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         // CONSTANTES DE COLORES PARA BOTONES
